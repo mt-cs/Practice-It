@@ -10,7 +10,6 @@ public class DiscountBill extends GroceryBill {
         discountItem=0;
     }
 
-    @Override
     public void add(Item i){
         super.add(i);
         if(preferred && i.getDiscount()>0){
@@ -43,7 +42,6 @@ public class DiscountBill extends GroceryBill {
         return discount*100/super.getTotal();
     }
 
-    @Override
     public double getTotal(){
         return super.getTotal()-discount;
     }
